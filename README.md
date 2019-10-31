@@ -1,2 +1,2 @@
 # social_media_sieve
-A sieve for social media
+Big data analytics for social media written in Rust
