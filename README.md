@@ -1,10 +1,18 @@
 # social_media_sieve
 Big data analytics for social media written in Rust
+
 ## Tools and technologies
-- Rust language.
+- Rust language
+- TODO
+
 ## Social media
+
 ### Currently supported social networks
-- VK.
+- VK
+
 ### Roadmap
-- Facebook.
-- LiveJournal.
+- Facebook
+- LiveJournal
+
+## Usage
+- TODO
