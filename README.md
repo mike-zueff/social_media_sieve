@@ -20,7 +20,5 @@ Big data analytics for social media written in Rust
 ```
 git clone https://github.com/mike-zueff/social_media_sieve.git
 cd social_media_sieve
-echo USERNAME > private_credentials
-echo PASSWORD >> private_credentials
 ```
 - TODO
