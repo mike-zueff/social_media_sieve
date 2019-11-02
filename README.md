@@ -20,5 +20,7 @@ Big data analytics for social media written in Rust
 ```
 git clone https://github.com/mike-zueff/social_media_sieve.git
 cd social_media_sieve
+touch private_patterns
+touch private_vk_tokens
 ```
 - TODO
