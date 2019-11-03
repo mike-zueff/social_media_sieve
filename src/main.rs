@@ -1,3 +1,5 @@
+/* SMS entry point. */
 fn main() {
-    println!("Hello, world!");
+    println!("SMS started.");
+    println!("SMS stopped.");
 }

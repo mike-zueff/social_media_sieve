@@ -12,3 +12,14 @@ authors = ["Mike Zueff <mike.zueff@gmail.com>"]
 edition = "2018"
 name = "sms"
 version = "0.1.0"
+
+[profile.dev]
+codegen-units = 16
+debug = false
+debug-assertions = false
+incremental = false
+lto = false
+opt-level = 3
+overflow-checks = false
+panic = 'unwind'
+rpath = false
