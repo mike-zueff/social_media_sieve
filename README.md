@@ -1,4 +1,4 @@
-# social_media_sieve
+# social_media_sieve (SMS)
 Big data analytics for social media written in Rust
 
 ## Tools and technologies
