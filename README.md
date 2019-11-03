@@ -3,6 +3,7 @@ Big data analytics for social media written in Rust
 
 ## Tools and technologies
 - Rust language
+- Serde
 - SQLite
 - VK API
 - TODO
