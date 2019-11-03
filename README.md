@@ -23,5 +23,6 @@ git clone https://github.com/mike-zueff/social_media_sieve.git
 cd social_media_sieve
 touch config/private_patterns
 touch config/private_vk_tokens
+cargo run
 ```
 - TODO
