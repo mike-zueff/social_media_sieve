@@ -1,5 +1,5 @@
 **/*.rs.bk
 /config/private_patterns
 /config/private_vk_tokens
-/notes/private_notes
+/notes
 /target
