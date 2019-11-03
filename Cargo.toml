@@ -1,3 +1,6 @@
+[dependencies]
+serde_json = "1.0"
+
 [lib]
 edition = "2018"
 name = "vk_api"
