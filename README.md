@@ -23,8 +23,16 @@ Big data analytics for social media written in Rust
 git clone https://github.com/mike-zueff/social_media_sieve.git
 cd social_media_sieve
 cat database/init.sql | sqlite3 database/sms_db_sqlite
-touch config/private_vk_tokens
+
+echo VK_API_TOKEN_1 > config/private_vk_api_tokens
+echo VK_API_TOKEN_2 >> config/private_vk_api_tokens
+echo VK_API_TOKEN_3 >> config/private_vk_api_tokens
+
+TODO
 touch config/private_patterns
 cargo run
 ```
-- TODO
+
+## Credits
+Author: Mike Zueff
+Email: mike.zueff [at] gmail.com
