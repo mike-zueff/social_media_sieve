@@ -1,29 +1,27 @@
-use rusqlite::*;
-use std::*;
+#[macro_use]
+extern crate diesel;
+
+mod database;
+use database::*;
+
+mod schema;
+use schema::vor_obl_settlements::dsl::*;
+
+use diesel::prelude::*;
+use sms::*;
 
 /* SMS entry point. */
 fn main() {
     println!("SMS started.");
 
-    match sms_db_init() {
-        Ok(_) => println!("Database initialization succeeded."),
-        Err(_) => panic!("Database initialization failed."),
-    }
+    let conn = sms_db_conn_establish();
+
+    let result: i64 = vor_obl_settlements
+        .count()
+        .get_result(&conn)
+        .expect(SMS_DB_ERROR_QUERY);
+
+    println!("Settlements count in the database: {}.", result);
 
     println!("SMS stopped.");
-}
-
-/* Database initialization. */
-fn sms_db_init() -> Result<()> {
-    let _ = fs::create_dir("database");
-    let sms_db_conn = Connection::open("database/sms_db_sqlite")?;
-
-    let _ = sms_db_conn.execute(
-        "CREATE TABLE if not exists vor_obl_settlements (
-            id integer primary key,
-            settlement_id integer,
-            settlement_title text
-        )", NO_PARAMS);
-
-    Ok(())
 }
