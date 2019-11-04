@@ -1,11 +1,11 @@
 [dependencies]
-rusqlite = "*"
+diesel = { version = "*", features = ["sqlite"] }
 serde_json = "*"
 
 [lib]
 edition = "2018"
-name = "vk_api"
-path = "vk_api/src/lib.rs"
+name = "sms"
+path = "src/lib.rs"
 
 [package]
 authors = ["Mike Zueff <mike.zueff@gmail.com>"]
