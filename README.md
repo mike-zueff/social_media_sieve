@@ -35,4 +35,5 @@ cargo run
 
 ## Credits
 Author: Mike Zueff
+
 Email: mike.zueff [at] gmail.com
