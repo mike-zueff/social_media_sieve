@@ -23,21 +23,6 @@ fn main() {
     let sms_vk_api_tokens = file_to_vec("config/private_vk_api_tokens").expect(SMS_IO_ERROR_COMMON);
 
     println!(
-        "VK API app ids:{}",
-        sms_vk_api_app_ids
-            .iter()
-            .fold(String::new(), |acc, app_id| acc
-                + "\n- "
-                + &app_id.to_string()
-                + ".")
-    );
-
-    println!(
-        "Current VK API app id:\n{}.",
-        sms_vk_api_app_ids[sms_current_vk_api_app_id]
-    );
-
-    println!(
         "VK API tokens:{}",
         sms_vk_api_tokens
             .iter()
@@ -50,6 +35,21 @@ fn main() {
     println!(
         "Current VK API token:\n{}.",
         sms_vk_api_tokens[sms_current_vk_api_token]
+    );
+
+    println!(
+        "VK API app ids:{}",
+        sms_vk_api_app_ids
+            .iter()
+            .fold(String::new(), |acc, app_id| acc
+                + "\n- "
+                + &app_id.to_string()
+                + ".")
+    );
+
+    println!(
+        "Current VK API app id: {}.",
+        sms_vk_api_app_ids[sms_current_vk_api_app_id]
     );
 
     let sms_db_connection = sms_db_conn_establish();
