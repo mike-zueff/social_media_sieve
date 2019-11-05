@@ -14,6 +14,15 @@ use sms::*;
 fn main() {
     println!("SMS started.");
 
+    let vk_api_tokens = file_to_vec("config/private_vk_api_tokens").expect(SMS_IO_ERROR_COMMON);
+
+    println!(
+        "VK API tokens:{}",
+        vk_api_tokens
+            .iter()
+            .fold(String::new(), |acc, token| acc + "\n" + &token.to_string())
+    );
+
     let conn = sms_db_conn_establish();
 
     let result: i64 = vor_obl_settlements
