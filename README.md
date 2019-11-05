@@ -24,6 +24,10 @@ git clone https://github.com/mike-zueff/social_media_sieve.git
 cd social_media_sieve
 cat database/init.sql | sqlite3 database/sms_db_sqlite
 
+echo VK_API_ID_1 > config/private_vk_api_ids
+echo VK_API_ID_2 >> config/private_vk_api_ids
+echo VK_API_ID_3 >> config/private_vk_api_ids
+
 echo VK_API_TOKEN_1 > config/private_vk_api_tokens
 echo VK_API_TOKEN_2 >> config/private_vk_api_tokens
 echo VK_API_TOKEN_3 >> config/private_vk_api_tokens
