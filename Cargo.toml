@@ -1,6 +1,7 @@
 [dependencies]
 diesel = { version = "*", features = ["sqlite"] }
 serde_json = "*"
+vkrs = "*"
 
 [lib]
 edition = "2018"
