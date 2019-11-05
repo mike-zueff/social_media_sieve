@@ -14,8 +14,28 @@ use sms::*;
 fn main() {
     println!("SMS started.");
 
-    let sms_current_vp_api_token = 0;
+    let sms_current_vk_api_app_id = 0;
+    let sms_current_vk_api_token = 0;
+
+    let sms_vk_api_app_ids =
+        file_to_vec("config/private_vk_api_app_ids").expect(SMS_IO_ERROR_COMMON);
+
     let sms_vk_api_tokens = file_to_vec("config/private_vk_api_tokens").expect(SMS_IO_ERROR_COMMON);
+
+    println!(
+        "VK API app ids:{}",
+        sms_vk_api_app_ids
+            .iter()
+            .fold(String::new(), |acc, app_id| acc
+                + "\n- "
+                + &app_id.to_string()
+                + ".")
+    );
+
+    println!(
+        "Current VK API app id:\n{}.",
+        sms_vk_api_app_ids[sms_current_vk_api_app_id]
+    );
 
     println!(
         "VK API tokens:{}",
@@ -28,8 +48,8 @@ fn main() {
     );
 
     println!(
-        "Current API key:\n{}.",
-        sms_vk_api_tokens[sms_current_vp_api_token]
+        "Current VK API token:\n{}.",
+        sms_vk_api_tokens[sms_current_vk_api_token]
     );
 
     let sms_db_connection = sms_db_conn_establish();
