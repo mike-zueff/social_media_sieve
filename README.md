@@ -7,7 +7,6 @@ Big data analytics for social media written in Rust
 - SQLite
 - Serde
 - VK API
-- TODO
 
 ## Social media
 
@@ -33,7 +32,6 @@ cat > config/private_vk_api_current_token.json <<EOF
 }
 EOF
 
-TODO
 touch config/private_patterns
 cargo run
 ```
