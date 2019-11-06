@@ -5,6 +5,7 @@ Big data analytics for social media written in Rust
 - Rust language
 - Diesel
 - SQLite
+- Serde
 - VK API
 - TODO
 
