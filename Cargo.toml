@@ -1,6 +1,5 @@
 [dependencies]
-diesel = { version = "*", features = ["sqlite"] }
-serde_json = "*"
+diesel = { features = ["sqlite"], version = "*" }
 vkrs = "*"
 
 [lib]
