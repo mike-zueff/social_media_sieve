@@ -1,6 +1,7 @@
 **/*.rs.bk
 /config/private_patterns
-/config/private_vk_api_token*.json
+/config/private_vk_api_current_token.json
+/config/private_vk_api_token_*.json
 /database/sms_db_sqlite
 /notes
 /target

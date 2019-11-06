@@ -3,7 +3,6 @@ Big data analytics for social media written in Rust
 
 ## Tools and technologies
 - Rust language
-- Serde
 - Diesel
 - SQLite
 - VK API
@@ -24,9 +23,10 @@ git clone https://github.com/mike-zueff/social_media_sieve.git
 cd social_media_sieve
 cat database/init.sql | sqlite3 database/sms_db_sqlite
 
-cat > config/private_vk_api_token.json <<EOF
+cat > config/private_vk_api_current_token.json <<EOF
 {
   "access_token": "TOKEN",
+  "email": "EMAIL",
   "expires_in": 0,
   "user_id": ID
 }
