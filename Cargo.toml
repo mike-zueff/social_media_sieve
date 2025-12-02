@@ -10,7 +10,7 @@ path = "src/lib.rs"
 
 [package]
 authors = ["Mike Zueff <mike.zueff@gmail.com>"]
-edition = "2018"
+edition = "2024"
 name = "sms"
 version = "0.1.0"
 
